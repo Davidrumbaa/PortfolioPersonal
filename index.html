@@ -42,15 +42,21 @@
             <!-- SECCION CONTACTO CON FORMULARIO BASICO -->
             <section id="contacto">
                 <h2>Contacto</h2>
+                <p>¿Tienes un proyecto en mente? ¡Contacta conmigo!</p>
+
                 <form id="formulario">
                     <p>
-                        <label> Nombre: <input type="text" name="nombre" required></label>
+                        <label for="nombre"> Nombre *<input type="text" id="nombre" name="nombre" required></label>
                     </p>
                     <p>
-                        <label> Email: <input type="email" name="email" required></label>
+                        <label for="email"> Email *<input type="email" id="email" name="email" required></label>
                     </p>
                     <p>
-                        <label> Mensaje: <textarea name="mensaje" required></textarea></label>
+                        <label for="asunto">Asunto<input type="text" id="asunto" name="asunto" required></label>
+                    </p>
+                    <p>
+                        <label for="mensaje"> Mensaje *<textarea id="mensaje" name="mensaje" rows="5" required
+                                placeholder="Cuéntame sobre tu proyecto..."></textarea></label>
                     </p>
                     <p>
                         <button type="submit">Enviar</button>
@@ -61,12 +67,37 @@
             <!-- SECCION PRIVACIDAD BASICA -->
             <section id="privacidad">
                 <h2>Política de Privacidad</h2>
-                <p>Los datos del formulario se usan solo para contacto profesional.</p>
-                <p>Responsable: David, Email: david.v.rumba@gmail.com</p>
+                <h3>1. Responsable del tratamiento</h3>
+                <p><strong>Responsable:</strong> David | <strong>Email:</strong>david.v.rumba@gmail.com</p>
+
+                <h3>2. Datos recopilados</h3>
+                <p>A través del formulario de contacto se recopila: nombre, email, asunto y mensaje.</p>
+
+                <h3>3. Finalidad</h3>
+                <p>Los datos se utilizan exclusivamente para responder a consultas profesionales y establecer
+                    comunicación laboral.</p>
+
+                <h3>4. Derechos del usuario</h3>
+                <p>Puede ejercer los derechos de acceso, rectificación, supresión, limitación y portabilidad contactando
+                    por email.</p>
+
+                <h3>5. Cookies</h3>
+                <p>Este sitio utilizará cookies técnicas necesarias y de preferencias (se implementará popup en
+                    siguiente commit).</p>
             </section>
         </div>
     </main>
 
+    <!-- FOOTER BÁSICO -->
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 Davidrumbaa. Portfolio desarrollado con HTML5, CSS3 y JavaScript.</p>
+            <p class="text-light">Tipografías: Inter y Playfair Display (locales)</p>
+        </div>
+    </footer>
+
+    <!-- JAVASCRIPT -->
+     <script src="js/script.js"></script>
 </body>
 
 </html>
