@@ -1,15 +1,35 @@
-// FORMULARIO DE CONTACTO CON VALIDACIÓN
-
+// MENÚ RESPONSIVE
 document.addEventListener("DOMContentLoaded", function () {
-  const contactoFormulario = document.getElementById("contactoFormulario");
+  const menuBtn = document.getElementById("menuBtn");
+  const navMobile = document.getElementById("navMobile");
 
-  if (contactoFormulario) {
-    contactoFormulario.addEventListener("submit", function (e) {
+  // Toggle menú móvil
+  menuBtn.addEventListener("click", function () {
+    this.classList.toggle("active");
+    navMobile.classList.toggle("active");
+  });
+
+  //Cerrar menú al hacer clic en enlaces
+  const mobileLinks = navMobile.querySelectorAll("a");
+  mobileLinks.forEach((link) => {
+    link.addEventListener("click", function () {
+      menuBtn.classList.remove("active");
+      navMobile.classList.remove("active");
+    });
+  });
+});
+
+// FORMULARIO DE CONTACTO CON VALIDACIÓN
+document.addEventListener("DOMContentLoaded", function () {
+  const formulario = document.getElementById("formulario");
+
+  if (formulario) {
+    formulario.addEventListener("submit", function (e) {
       e.preventDefault();
 
-      const nombre = document.getElementById("Nombre").value.trim();
-      const email = document.getElementById("Email").value.trim();
-      const mensaje = document.getElementById("Documento").value.trim();
+      const nombre = document.getElementById("nombre").value.trim();
+      const email = document.getElementById("email").value.trim();
+      const mensaje = document.getElementById("documento").value.trim();
 
       //VALIDACION BÁSICA
       if (!nombre || !email || !mensaje) {
@@ -35,7 +55,7 @@ document.addEventListener("DOMContentLoaded", function () {
       alert("✅ ¡Gracias ${nombre}! Mensaje enviado correctamente.");
 
       //LIMPIAR FORMULARIO
-      contactoFormulario.reset();
+      formulario.reset();
 
       //LOG PARA DESARROLLO
       console.log("📧 Formulario enviado:", {
@@ -49,12 +69,11 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 
 //INICIALIZACIÓN Y DEBUGGING
-window.addEventListener("load", function() {
-  console.log('🚀 Portfolio cargado correctamente');
+window.addEventListener("load", function () {
+  console.log("🚀 Portfolio cargado correctamente");
 });
 
-
 //MANEJO DE ERRORES
-window.addEventListener("error",function(e) {
-  console.log('❌ Error en el portfolio:', e.error);
+window.addEventListener("error", function (e) {
+  console.log("❌ Error en el portfolio:", e.error);
 });
