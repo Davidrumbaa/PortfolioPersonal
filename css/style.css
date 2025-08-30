@@ -200,20 +200,20 @@ header .container {
     margin-bottom: 0.5rem;
   }
 
-   form p {
-        margin-bottom: 1.2rem;
-    }
-    
-    label {
-        font-size: 16px;
-        margin-bottom: 0.8rem;
-    }
-    
-    button {
-        width: 100%;
-        padding: 1.2rem 2rem;
-        font-size: 16px;
-    }
+  form p {
+    margin-bottom: 1.2rem;
+  }
+
+  label {
+    font-size: 16px;
+    margin-bottom: 0.8rem;
+  }
+
+  button {
+    width: 100%;
+    padding: 1.2rem 2rem;
+    font-size: 16px;
+  }
 }
 
 h1 {
@@ -332,126 +332,223 @@ footer .text-light {
 }
 
 .cookie-popup.show {
-  transform: translateY();
+  transform: translateY(0);
   opacity: 1;
 }
 
 .cookie-content h3 {
-    margin-bottom: 1rem;
-    color: #0f172a;
+  margin-bottom: 1rem;
+  color: #0f172a;
 }
 
 .cookie-content p {
-    margin-bottom: 1.5rem;
-    line-height: 1.6;
+  margin-bottom: 1.5rem;
+  line-height: 1.6;
 }
 
 .cookie-buttons {
-    display: flex;
-    gap: 1rem;
-    flex-wrap: wrap;
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
 }
 
 .btn-cookie {
-    padding: 0.8rem 1.5rem;
-    border: none;
-    border-radius: 4px;
-    font-family: "Inter", sans-serif;
-    font-weight: 500;
-    cursor: pointer;
-    background: #ff3258;
-    color: white;
+  padding: 0.8rem 1.5rem;
+  border: none;
+  border-radius: 4px;
+  font-family: "Inter", sans-serif;
+  font-weight: 500;
+  cursor: pointer;
+  background: #ff3258;
+  color: white;
 }
 
 .btn-essential {
-    background: #64748b;
+  background: #64748b;
 }
 
 .btn-reject {
-    background: #e11d48;
+  background: #e11d48;
 }
 
 .btn-cookie:hover {
-    opacity: 0.9;
-    transform: transalateY(-1px);
+  opacity: 0.9;
+  transform: translateY(-1px);
 }
 
 /* RESPONSIVE COMPLETO */
 /* Pantallas grandes */
 @media screen and (min-width: 1200px) {
-    .container {
-        padding: 0 40px;
-    }
+  .container {
+    padding: 0 40px;
+  }
 }
 
 /* Tablet grande */
 @media screen and (max-width: 1024px) {
-    h1 {
-        font-size: 2.2rem;
-    }
-    
-    .nav-desktop a {
-        font-size: 14px;
-    }
-    
-    section {
-        padding: 1.8rem 0;
-    }
+  h1 {
+    font-size: 2.2rem;
+  }
+
+  .nav-desktop a {
+    font-size: 14px;
+  }
+
+  section {
+    padding: 1.8rem 0;
+  }
 }
 
 /* Móvil grande */
 @media screen and (max-width: 480px) {
-    .container {
-        padding: 0 15px;
-    }
-    
-    section {
-        padding: 1.5rem 0;
-        margin-bottom: 2rem;
-    }
-    
-    input, textarea {
-        max-width: 100%;
-        font-size: 16px; 
-    }
-    
-    .cookie-popup {
-        left: 10px;
-        right: 10px;
-        bottom: 10px;
-        padding: 1.5rem;
-    }
-    
-    .btn-cookie {
-        font-size: 14px;
-        padding: 0.7rem 1rem;
-    }
+  .container {
+    padding: 0 15px;
+  }
+
+  section {
+    padding: 1.5rem 0;
+    margin-bottom: 2rem;
+  }
+
+  input,
+  textarea {
+    max-width: 100%;
+    font-size: 16px;
+  }
+
+  .cookie-popup {
+    left: 10px;
+    right: 10px;
+    bottom: 10px;
+    padding: 1.5rem;
+  }
+
+  .btn-cookie {
+    font-size: 14px;
+    padding: 0.7rem 1rem;
+  }
 }
 
 /* Móvil pequeño */
 @media screen and (max-width: 360px) {
-    h1 {
-        font-size: 1.8rem;
+  h1 {
+    font-size: 1.8rem;
+  }
+
+  h2 {
+    font-size: 1.6rem;
+  }
+
+  .cookie-popup {
+    left: 5px;
+    right: 5px;
+    bottom: 5px;
+    padding: 1rem;
+  }
+
+  .cookie-buttons {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+  .btn-cookie {
+    width: 100%;
+  }
+}
+
+/* PROYECTOS */
+.project {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 3rem;
+  margin-bottom: 4rem;
+  align-items: center;
+}
+
+.project:nth-child(even) {
+  direction: rtl;
+}
+
+.project:nth-child(even) .project-content {
+  direction: ltr;
+}
+
+.project-image {
+  width: 100%;
+  height: 250px;
+  object-fit: cover;
+  border-radius: 8px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.project-content h3 {
+  font-size: 1.8rem;
+  margin-bottom: 1rem;
+  color: #0f172a;
+}
+
+.project-description {
+  color: #64748b;
+  line-height: 1.6;
+  margin-bottom: 1.5rem;
+}
+
+.project-tech {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.project-tech span {
+  background: #f1f5f9;
+  color: #475569;
+  padding: 0.3rem 0.8rem;
+  border-radius: 15px;
+  font-size: 0.8rem;
+  font-weight: 500;
+}
+
+.project-links {
+  display: flex;
+  gap: 1rem;
+}
+
+.btn-project {
+  padding: 0.8rem 1.5rem;
+  background: #ff3258;
+  color: white;
+  text-decoration: none;
+  border-radius: 4px;
+  font-weight: 500;
+  transition: all 0.3s ease;
+}
+
+.btn-project:hover {
+  background: #d42849;
+}
+
+.btn-secondary {
+  background: transparent;
+  color: #ff3258;
+  border: 2px solid #ff3258;
+}
+
+.btn-secondary:hover {
+  background: #ff3258;
+  color: white;
+}
+
+/* Responsive para proyectos */
+@media screen and (max-width: 768px) {
+    .project {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+        text-align: center;
     }
     
-    h2 {
-        font-size: 1.6rem;
-    }
-    
-    .cookie-popup {
-        left: 5px;
-        right: 5px;
-        bottom: 5px;
-        padding: 1rem;
-    }
-    
-    .cookie-buttons {
-        flex-direction: column;
-        gap: 0.5rem;
-    }
-    
-    .btn-cookie {
-        width: 100%;
+    .project:nth-child(even) {
+        direction: ltr;
     }
 }
 
