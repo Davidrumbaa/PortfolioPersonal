@@ -57,7 +57,7 @@ document.addEventListener("DOMContentLoaded", function () {
       }
 
       //ENVÍO EXITOSO
-      alert("✅ ¡Gracias ${nombre}! Mensaje enviado correctamente.");
+      alert(`✅ ¡Gracias ${nombre}! Mensaje enviado correctamente.`);
 
       //LIMPIAR FORMULARIO
       formulario.reset();
@@ -112,7 +112,7 @@ document.addEventListener("DOMContentLoaded", function () {
   function setCookie(name, value, days) {
     const expires = new Date();
     expires.setTime(expires.getTime() + days * 24 * 60 * 60 * 1000);
-    document.cookie = `${name}=${value};expires=${expires.toUTCString()};path=`;
+    document.cookie = `${name}=${value};expires=${expires.toUTCString()};path=/`;
   }
 
   function getCookie(name) {

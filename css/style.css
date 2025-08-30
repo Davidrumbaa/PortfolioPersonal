@@ -4,30 +4,40 @@
   font-family: "Inter";
   src: url("../fonts/Inter_18pt-Regular.ttf") format("truetype");
   font-weight: 400;
+  font-style: normal;
+  font-display: swap;
 }
 
 @font-face {
   font-family: "Inter";
   src: url("../fonts/Inter_18pt-Medium.ttf") format("truetype");
   font-weight: 500;
+  font-style: normal;
+  font-display: swap;
 }
 
 @font-face {
   font-family: "Inter";
   src: url("../fonts/Inter_18pt-Bold.ttf") format("truetype");
   font-weight: 700;
+  font-style: normal;
+  font-display: swap;
 }
 
 @font-face {
   font-family: "Playfair Display";
   src: url("../fonts/PlayfairDisplay-Regular.ttf") format("truetype");
   font-weight: 400;
+  font-style: normal;
+  font-display: swap;
 }
 
 @font-face {
   font-family: "Playfair Display";
   src: url("../fonts/PlayfairDisplay-Bold.ttf") format("truetype");
   font-weight: 700;
+  font-style: normal;
+  font-display: swap;
 }
 
 /* ESTILOS BÁSICOS CON LAS FUENTES */
@@ -69,7 +79,7 @@ header {
 header .container {
   display: flex;
   justify-content: space-between;
-  align-self: center;
+  align-items: center;
 }
 
 /* NAVEGACIÓN DESKTOP */
@@ -158,7 +168,7 @@ header .container {
   display: block;
 }
 
-/* RESPONSIVE BÁSICO */
+/* RESPONSIVE BÁSICO*/
 @media screen and (max-width: 768px) {
   /* Ocultar navegación desktop en el móvil */
   .nav-desktop {
@@ -189,6 +199,21 @@ header .container {
     width: 100%;
     margin-bottom: 0.5rem;
   }
+
+   form p {
+        margin-bottom: 1.2rem;
+    }
+    
+    label {
+        font-size: 16px;
+        margin-bottom: 0.8rem;
+    }
+    
+    button {
+        width: 100%;
+        padding: 1.2rem 2rem;
+        font-size: 16px;
+    }
 }
 
 h1 {
@@ -303,11 +328,11 @@ footer .text-light {
   z-index: 10000;
   transform: translateY(100px);
   opacity: 0;
-  transition: all 0.3 ease;
+  transition: all 0.3s ease;
 }
 
 .cookie-popup.show {
-  translate: translateY();
+  transform: translateY();
   opacity: 1;
 }
 
@@ -328,7 +353,7 @@ footer .text-light {
 }
 
 .btn-cookie {
-    padding: 0,8rem 1.5rem;
+    padding: 0.8rem 1.5rem;
     border: none;
     border-radius: 4px;
     font-family: "Inter", sans-serif;
@@ -348,7 +373,86 @@ footer .text-light {
 
 .btn-cookie:hover {
     opacity: 0.9;
-    translate: transalateY(-1px);
+    transform: transalateY(-1px);
+}
+
+/* RESPONSIVE COMPLETO */
+/* Pantallas grandes */
+@media screen and (min-width: 1200px) {
+    .container {
+        padding: 0 40px;
+    }
+}
+
+/* Tablet grande */
+@media screen and (max-width: 1024px) {
+    h1 {
+        font-size: 2.2rem;
+    }
+    
+    .nav-desktop a {
+        font-size: 14px;
+    }
+    
+    section {
+        padding: 1.8rem 0;
+    }
+}
+
+/* Móvil grande */
+@media screen and (max-width: 480px) {
+    .container {
+        padding: 0 15px;
+    }
+    
+    section {
+        padding: 1.5rem 0;
+        margin-bottom: 2rem;
+    }
+    
+    input, textarea {
+        max-width: 100%;
+        font-size: 16px; 
+    }
+    
+    .cookie-popup {
+        left: 10px;
+        right: 10px;
+        bottom: 10px;
+        padding: 1.5rem;
+    }
+    
+    .btn-cookie {
+        font-size: 14px;
+        padding: 0.7rem 1rem;
+    }
+}
+
+/* Móvil pequeño */
+@media screen and (max-width: 360px) {
+    h1 {
+        font-size: 1.8rem;
+    }
+    
+    h2 {
+        font-size: 1.6rem;
+    }
+    
+    .cookie-popup {
+        left: 5px;
+        right: 5px;
+        bottom: 5px;
+        padding: 1rem;
+    }
+    
+    .cookie-buttons {
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+    
+    .btn-cookie {
+        width: 100%;
+    }
 }
 
 /* COLORES AUXILIARES */
