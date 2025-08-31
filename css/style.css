@@ -73,7 +73,6 @@ header {
   left: 0;
   right: 0;
   z-index: 1000;
-  
 }
 
 .container {
@@ -401,7 +400,7 @@ footer .text-light {
 .cookie-popup.show {
   transform: translateY(0);
   opacity: 1;
-   display: block;
+  display: block;
   pointer-events: auto;
 }
 
@@ -763,7 +762,6 @@ footer .text-light {
   text-decoration: none;
   border-radius: 8px;
   font-weight: 600;
-  transition: all 0.3s ease;
   display: inline-block;
   transition: background-color 0.3s ease, transform 0.2s ease;
   border: none;
@@ -774,7 +772,6 @@ footer .text-light {
 .btn-hero:hover {
   background: #d42849;
   transform: translateY(-2px);
-  transform: translateY(-1px);
 }
 
 .btn-hero:active {
@@ -857,7 +854,7 @@ footer .text-light {
 
 /* SCROLL SUAVE */
 html {
-    scroll-behavior: smooth;
+  scroll-behavior: smooth;
 }
 
 /* COLORES AUXILIARES */

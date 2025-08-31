@@ -81,6 +81,13 @@ document.addEventListener("DOMContentLoaded", function () {
   const acceptEssential = document.getElementById("acceptEssential");
   const rejectCookies = document.getElementById("rejectCookies");
 
+  if (!cookiePopup || !acceptAll || !acceptEssential || !rejectCookies) {
+    console.warn(
+      "⚠️ Elementos del popup de cookies no encontrados. Se omite la lógica de consentimiento."
+    );
+    return;
+  }
+
   //Mostar popup si no hay consentimiento previo
   if (!getCookie("cookieConsent")) {
     setTimeout(() => {
