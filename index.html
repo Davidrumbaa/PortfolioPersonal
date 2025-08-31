@@ -44,17 +44,84 @@
         </div>
     </header>
     <main>
-        <!-- CONTENIDO BÁSICO -->
+        <!-- INICIO -->
         <div class="container">
             <section id="inicio">
-                <h2>Inicio</h2>
-                <p>Bienvenido a mi portfolio personal.</p>
+                <div class="hero-content">
+                    <div class="hero-text">
+                        <h2>Hola, soy <span class="text-primary">David</span></h2>
+                        <p class="hero-subtitle">Estudiante de DAW · Desarrollo Web & Ciberseguridad</p>
+                        <p class="hero-description">
+                            Estoy en 1.º de DAW y cursando un máster de ciberseguridad. Construyo proyectos web con HTML, CSS, JS y Java, trabajo con MySQL y Git/GitHub. Me centro en responsive, accesibilidad y buenas prácticas.
+                        </p>
+                        <div class="hero-buttons">
+                            <a href="#proyectos" class="btn-hero">Ver Mis Proyectos</a>
+                            <a href="#contacto" class="btn-hero btn-outline">Contactar</a>
+                        </div>
+                    </div>
+                    <div class="hero-stats">
+                        <div class="stat-item">
+                            <span class="stat-number">10+</span>
+                            <span class="stat-label">Proyectos de clase y personales</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-number">1.º</span>
+                            <span class="stat-label">Curso DAW (2025–presente)</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-number">Sí</span>
+                            <span class="stat-label">Disponible para prácticas</span>
+                        </div>
+                    </div>
+                </div>
             </section>
 
             <!-- SECCION SOBRE MI -->
             <section id="sobre-mi">
                 <h2>Sobre Mí</h2>
-                <p></p>
+                <div class="about-content">
+                    <div class="about-text">
+                        <h3>Desarrollador Web en formación (DAW)</h3>
+                        <p>
+                            Soy David, estudiante de 1.º de DAW. Me estoy formando en desarrollo web y ciberseguridad
+                            mientras construyo proyectos reales.
+                        </p>
+                        <p>
+                            Trabajo con HTML, CSS, JavaScript y Java, MySQL y Git/GitHub (IntelliJ y VS Code). Me gusta
+                            el código claro, responsive y seguro.
+                            Busco primeras prácticas/colaboraciones junior para seguir aprendiendo y aportar.
+                        </p>
+
+                        <h4>Mi experiencia</h4>
+                        <div class="experience-item">
+                            <strong>Estudiante de Desarrollo de Aplicaciones Web</strong> - ThePower (2025–presente)
+                            <p>Proyectos: CRUD en Java (Gestor de Notas/Clientes), modelado SQL, webs responsive.
+                            </p>
+                        </div>
+                        <div class="experience-item">
+                            <strong>Formación en Ciberseguridad e IA</strong> - Autodidacta (2024-presente)
+                            <p>En curso: fundamentos de redes y sistemas, Linux, buenas prácticas OWASP y uso práctico
+                                de IA.</p>
+                        </div>
+                    </div>
+                    <div class="about-skills">
+                        <h4>Habilidades Técnicas</h4>
+                        <div class="skills-grid">
+                            <div class="skill-item">HTML5</div>
+                            <div class="skill-item">CSS3</div>
+                            <div class="skill-item">JavaScript</div>
+                            <div class="skill-item">Java</div>
+                            <div class="skill-item">Python</div>
+                            <div class="skill-item">Git</div>
+                            <div class="skill-item">MySQL</div>
+                            <div class="skill-item">Jupyter</div>
+                            <div class="skill-item">Node.js</div>
+                            <div class="skill-item">MongoDB</div>
+                            <div class="skill-item">PostgreSQL</div>
+                            <div class="skill-item">Virtualbox</div>
+                        </div>
+                    </div>
+                </div>
             </section>
 
             <!-- SECCION PROYECTOS -->
@@ -141,7 +208,7 @@
                         <label for="email"> Email *<input type="email" id="email" name="email" required></label>
                     </p>
                     <p>
-                        <label for="asunto">Asunto<input type="text" id="asunto" name="asunto" required></label>
+                        <label for="asunto">Asunto *<input type="text" id="asunto" name="asunto" required></label>
                     </p>
                     <p>
                         <label for="mensaje"> Mensaje *<textarea id="mensaje" name="mensaje" rows="5" required
