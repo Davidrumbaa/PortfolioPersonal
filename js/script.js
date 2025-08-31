@@ -31,6 +31,7 @@ document.addEventListener("DOMContentLoaded", function () {
   if (formulario) {
     formulario.addEventListener("submit", function (e) {
       e.preventDefault();
+      e.stopPropagation();
 
       const nombre = document.getElementById("nombre").value.trim();
       const email = document.getElementById("email").value.trim();
@@ -87,19 +88,25 @@ document.addEventListener("DOMContentLoaded", function () {
     }, 2000);
   }
 
-  acceptAll.addEventListener("click", () => {
+  acceptAll.addEventListener("click", function (e) {
+    e.stopPropagation(); // Evita que el evento se propague
+    e.preventDefault(); // Evita comportamiento por defecto
     console.log("🍪 Usuario eligió: ACEPTAR TODAS las cookies");
     setCookie("cookieConsent", "all", 365);
     hidePopup();
   });
 
-  acceptEssential.addEventListener("click", () => {
+  acceptEssential.addEventListener("click", function (e) {
+    e.stopPropagation();
+    e.preventDefault();
     console.log("🍪 Usuario eligió: SOLO COOKIES ESENCIALES");
     setCookie("cookieConsent", "essential", 365);
     hidePopup();
   });
 
-  rejectCookies.addEventListener("click", () => {
+  rejectCookies.addEventListener("click", function (e) {
+    e.stopPropagation();
+    e.preventDefault();
     console.log("🍪 Usuario eligió: RECHAZAR cookies");
     setCookie("cookieConsent", "rejected", 365);
     hidePopup();
@@ -125,6 +132,30 @@ document.addEventListener("DOMContentLoaded", function () {
     }
     return null;
   }
+});
+
+// SCROLL SUAVE
+document.addEventListener("DOMContentLoaded", function () {
+  const navLinks = document.querySelectorAll(".nav-desktop a, .nav-mobile a");
+
+  navLinks.forEach((link) => {
+    link.addEventListener("click", function (e) {
+      e.preventDefault();
+
+      const targetId = this.getAttribute("href").substring(1);
+      const targetSection = document.getElementById(targetId);
+
+      if (targetSection) {
+        const headerHeight = 80;
+        const offsetPosition = targetSection.offsetTop - headerHeight;
+
+        window.scrollTo({
+          top: offsetPosition,
+          behavior: "smooth",
+        });
+      }
+    });
+  });
 });
 
 //INICIALIZACIÓN Y DEBUGGING
